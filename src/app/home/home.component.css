@@ -1,0 +1,15 @@
+.tarang-bg{
+    background-image: url('../../assets/images/svg/vectorart-blue.svg') ;
+    background-size: 100vw ;
+    background-repeat: no-repeat;
+}
+.triangle-bg{
+    background-image: url('../../assets/images/svg/Polygon1.png') ;
+    background-size:300px 500px  ;
+    background-repeat: no-repeat;
+    background-position: left ;
+    background-color: transparent;
+}
+.hexagon{
+ clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+}
