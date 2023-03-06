@@ -1,0 +1,138 @@
+<div class="bg-[#00002C] w-screen">
+  <div
+    class="h-screen w-full flex items-center flex-col gap-8 pt-8 container mx-auto"
+  >
+    <span class="text-3xl text-white"> Add Result</span>
+
+    <form class="flex flex-col gap-4 w-full" action="" (ngSubmit)="addResult()">
+      <!-- Event -->
+      <div class="flex items-center justify-center w-full">
+        <div class="relative w-full">
+          <input
+            type="text"
+            name="event"
+            id="username"
+            class="w-full rounded px-2 py-3 border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer"
+            autocomplete="off"
+            [(ngModel)]="event"
+          />
+          <label
+            for="username"
+            class="ml-2 absolute left-0 top-1 text-black text-medium cursor-text peer-focus:text-xs peer-focus:-top-4 peer-focus:text-white transition-all"
+            >Event</label
+          >
+        </div>
+      </div>
+      <!-- Name -->
+      <div class="flex items-center justify-center w-full">
+        <div class="relative w-full">
+          <input
+            type="text"
+            id="username"
+            class="w-full rounded px-2 py-3 border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer"
+            autocomplete="off"
+            name="name"
+            [(ngModel)]="name"
+          />
+          <label
+            for="username"
+            class="ml-2 absolute left-0 top-1 text-black text-medium cursor-text peer-focus:text-xs peer-focus:-top-4 peer-focus:text-white transition-all"
+            >Name</label
+          >
+        </div>
+      </div>
+      <!-- College -->
+      <div class="flex items-center justify-center w-full">
+        <div class="relative w-full">
+          <input
+            type="text"
+            id="username"
+            class="w-full rounded px-2 py-3 border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer"
+            autocomplete="off"
+            name="college"
+            [(ngModel)]="college"
+          />
+          <label
+            for="username"
+            class="ml-2 absolute left-0 top-1 text-black text-medium cursor-text peer-focus:text-xs peer-focus:-top-4 peer-focus:text-white transition-all"
+            >College</label
+          >
+        </div>
+      </div>
+      <!-- Position -->
+      <div class="flex items-center justify-center w-full">
+        <div class="relative w-full">
+          <input
+            type="number"
+            id="username"
+            class="w-full rounded px-2 py-3 border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer"
+            autocomplete="off"
+            name="position"
+            [(ngModel)]="position"
+          />
+          <label
+            for="username"
+            class="ml-2 absolute left-0 top-1 text-black text-medium cursor-text peer-focus:text-xs peer-focus:-top-4 peer-focus:text-white transition-all"
+            >Position</label
+          >
+        </div>
+      </div>
+      <!-- Point -->
+      <div class="flex items-center justify-center w-full">
+        <div class="relative w-full">
+          <input
+            type="number"
+            id="username"
+            class="w-full rounded px-2 py-3 border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer"
+            autocomplete="off"
+            name="mark"
+            [(ngModel)]="mark"
+          />
+          <label
+            for="username"
+            class="ml-2 absolute left-0 top-1 text-black text-medium cursor-text peer-focus:text-xs peer-focus:-top-4 peer-focus:text-white transition-all"
+            >Point</label
+          >
+        </div>
+      </div>
+      <button class="w-full mx-auto bg-white">Add Result</button>
+    </form>
+  </div>
+  <!-- results -->
+  <div class="container mx-auto px-5">
+    <div class="relative overflow-x-auto">
+      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead
+          class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+        >
+          <tr>
+            <th scope="col" class="px-6 py-3">Event</th>
+            <th scope="col" class="px-6 py-3">Name</th>
+            <th scope="col" class="px-6 py-3">college</th>
+            <th scope="col" class="px-6 py-3">Point</th>
+            <th scope="col" class="px-6 py-3">position</th>
+            <th scope="col" class="px-6 py-3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let item of results"
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+          >
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+{{item.event}}
+            </th>
+            <td class="px-6 py-4">{{item.name}}</td>
+            <td class="px-6 py-4">{{item.college}}</td>
+            <td class="px-6 py-4">{{item.position}}</td>
+            <td class="px-6 py-4">{{item.mark}}</td>
+            <td class="px-6 py-4"><button (click)='deleteOne(item._id)' class="bg-red-400 text-white px-4 py-2 w-min rounded">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
