@@ -11,6 +11,7 @@ export class PointTableComponent implements OnInit {
 active:string='eventwise'
   constructor(private api: ApiService) {
     this.getOverall();
+    this.getOneResult('tesoro')
   }
 
   getOverall() {
@@ -18,7 +19,16 @@ active:string='eventwise'
       this.overall = res.data;
       console.log(res);
     });
-  }
 
+  }
+getOneResult(event:string){
+this.api.getOneResult({event:event}).subscribe(res=>{
+console.log(res);
+( this as any)[event]=res.result
+console.log(this.tesoro)
+})
+}
+
+public tesoro:any=[]
   ngOnInit(): void {}
 }
