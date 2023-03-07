@@ -61,7 +61,8 @@
     <div class="flex justify-center pb-20">
       <span class="text-7xl font-semibold text-white">EVENTS</span>
     </div>
-    <div class="flex flex-col mr-40 items-center">
+    <!-- desktop view -->
+    <div class="xl:flex flex-col mr-40 items-center hidden ">
       <div class="flex gap-16">
         <div
           class="flex relative h-[295px] w-[280px] my-2 bg-[#D48E05] justify-center items-center hexagon"
@@ -449,8 +450,52 @@
         </div>
       </div>
     </div>
+    <!-- mobile view -->
+      <div class="xl:hidden flex relative w-full h-screen justify-center items-center overflow-hidden">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper justify-center">
+            <div class="swiper-slide">
+              <div
+              class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+            >
+              <div class="text-2xl font-bold">TEROSO</div>
+              <div class="flex gap-6 items-center justify-between">
+                <div class="text-lg font-bold">TREASURE HUNT</div>
+                <div>
+                  <img
+                    class="h-16 w-16"
+                    src="../../assets/images/png/event-teroso.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="text-lg font-bold">1 Prize:₹ 10,000/-</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+              class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+            >
+              <div class="text-2xl font-bold">TEROSO</div>
+              <div class="flex gap-6 items-center justify-between">
+                <div class="text-lg font-bold">TREASURE HUNT</div>
+                <div>
+                  <img
+                    class="h-16 w-16"
+                    src="../../assets/images/png/event-teroso.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="text-lg font-bold">1 Prize:₹ 10,000/-</div>
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>
   </div>
-  <div class="py-20">
+    
+  <div class="py-20 lg:flex hidden justify-center">
     <div class="flex flex-col gap-12 items-center">
       <span
         class="rounded-lg px-16 py-3 bg-[#51015A] border border-[#FF61F4] text-white font-semibold text-xl"
@@ -512,3 +557,22 @@
   <div class="bg-red-600 w-full h-20">
   </div>
 </div>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+</script>
