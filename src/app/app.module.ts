@@ -22,6 +22,9 @@ import { PsyNtwistsComponent } from './events/psy-ntwists/psy-ntwists.component'
 import { GrafiaComponent } from './events/grafia/grafia.component';
 import { CaptionStatersComponent } from './events/caption-staters/caption-staters.component';
 import { GamingComponent } from './events/gaming/gaming.component';
+import { AdminComponent } from './admin/admin.component';
+import { FormsModule } from '@angular/forms';
+import{HttpClientModule}from     '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -44,13 +47,16 @@ import { GamingComponent } from './events/gaming/gaming.component';
     PsyNtwistsComponent,
     GrafiaComponent,
     CaptionStatersComponent,
-    GamingComponent
+    GamingComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
