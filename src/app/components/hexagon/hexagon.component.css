@@ -9,7 +9,7 @@
     width: 280px;
     height: 295px;
    filter: blur(3px) brightness(.8);
-
+    transform: scale(200px);
    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
   }
   .swiper-slide-active{

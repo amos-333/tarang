@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="w-full -mt-10 flex justify-center pb-40 triangle-bg">
-    <div class="flex gap-16 h-64">
+    <div class="flex gap-16 h-64 hidden">
       <a href="#events" class="">
         <div
           class="flex flex-col items-center justify-center gap-8 h-full rounded-[33px] border border-[#DB6A01] w-52 hover:border-blue-900 hover:bg-blue-900 duration-200 bg-[#00001C]"
@@ -40,7 +40,7 @@
           <div class="text-xl text-white font-semibold">REGISTRATION</div>
         </div>
       </a>
-      <a href="">
+      <a routerLink="/point-table">
         <div
           class="flex flex-col items-center justify-center gap-8 h-full rounded-[33px] border border-[#DB6A01] w-52 hover:border-blue-900 hover:bg-blue-900 duration-200 bg-[#00001C]"
         >
@@ -451,9 +451,27 @@
       </div>
     </div>
     <!-- mobile view -->
-      <div class="xl:hidden flex relative w-full h-screen justify-center items-center overflow-hidden">
+      <div class="xl:hidden flex h-screen w-screen overflow-hidden">
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper justify-center">
+          <div class="swiper-wrapper flex">
+            <div class="swiper-slide">
+              <div
+              class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+            >
+              <div class="text-2xl font-bold">TEROSO</div>
+              <div class="flex gap-6 items-center justify-between">
+                <div class="text-lg font-bold">TREASURE HUNT</div>
+                <div>
+                  <img
+                    class="h-16 w-16"
+                    src="../../assets/images/png/event-teroso.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="text-lg font-bold">1 Prize:₹ 10,000/-</div>
+              </div>
+            </div>
             <div class="swiper-slide">
               <div
               class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
@@ -495,56 +513,57 @@
       </div>
   </div>
     
-  <div class="py-20 lg:flex hidden justify-center">
-    <div class="flex flex-col gap-12 items-center">
+  <div class="py-20 md:flex justify-center">
+    <div class="flex flex-col md:gap-12 gap-12 items-center">
       <span
         class="rounded-lg px-16 py-3 bg-[#51015A] border border-[#FF61F4] text-white font-semibold text-xl"
         >CONTACT DETAILS</span
       >
-      <div class="flex gap-12">
-        <div class="bg-white rounded-3xl flex flex-col items-center w-[440px]">
+      <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8 lg:12 gap-12">
+        <div class="bg-white rounded-3xl flex flex-col items-center min-w-[340px] lg:px-6">
           <span
             class="rounded-xl px-6 text-white py-3 bg-[#51015A] border border-[#FF61F4] font-semibold text-lg -mt-6"
             >STAFF COORDINATORS</span
           >
-          <div class="text-xl font-semibold flex flex-col py-16 gap-3">
-            <div class="flex justify-between px-4">
+          
+          <div class="text-xl font-semibold flex justify-center flex-col py-16 gap-3">
+            <div class="flex justify-between ">
               <span>Dr. Karthick.K </span>
               <span>- 9600549339</span>
             </div>
-            <div class="flex justify-between px-4">
+            <div class="flex justify-between ">
               <span>Dr. Muhsina Lubaiba</span>
               <span>- 7034574188</span>
             </div>
-            <div class="flex justify-between px-4">
+            <div class="flex justify-between ">
               <span>Mr. Muthukumar P</span>
               <span>- 9790041715 </span>
             </div>
           </div>
         </div>
-        <div class="bg-white rounded-3xl flex flex-col items-center w-[440px]">
+        <div class="bg-white rounded-3xl flex flex-col items-center min-w-[400px] lg:px-6">
           <span
             class="rounded-xl px-6 text-white py-3 bg-[#51015A] border border-[#FF61F4] font-semibold text-lg -mt-6"
             >STUDENT COORDINATORS</span
           >
           <div class="text-xl font-semibold flex flex-col py-10 gap-3">
-            <div class="flex justify-between px-10">
+            <div class="flex justify-between px-4">
               <span>Mr. Rahul </span>
               <span>- 9442721541</span>
             </div>
-            <div class="flex justify-between px-10">
+            <div class="flex justify-between px-4">
               <span>Mr. Mohammed Savad</span>
               <span>- 7510942572</span>
             </div>
-            <div class="flex justify-between px-10">
+            <div class="flex justify-between px-4">
               <span>Mr. Manikandan</span>
               <span>- 9943685998</span>
             </div>
-            <div class="flex justify-between px-10">
+            <div class="flex justify-between px-4">
               <span>Ms. Minnu Susan Chacko</span>
               <span>- 9207045038</span>
             </div>
-            <div class="flex justify-between px-10">
+            <div class="flex justify-between px-4">
               <span>Mr. S.Muhammed Misbah</span>
               <span>- 9946711668</span>
             </div>
@@ -557,22 +576,3 @@
   <div class="bg-red-600 w-full h-20">
   </div>
 </div>
-
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
-</script>
