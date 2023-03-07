@@ -1,40 +1,72 @@
-<div class="bg-[#00002C] h-screen items-center flex flex-col gap-12 pt-20">
-    <div class="text-2xl font-bold text-white">POINT TABLE</div>
-    <div class="flex justify-between gap-16">
-        <span class="text-lg font-semibold text-white focus:underline-offset-1">EVENT WISE</span>
-        <span class="text-lg font-semibold text-white focus:underline-offset-1">COLLEGE WISE</span>
-    </div>
-<div class="overscroll-x-auto">
+<div
+  class="bg-[#00002C] h-screen items-center flex flex-col gap-12 pt-20 items-center"
+>
+  <div class="text-2xl font-bold text-white">POINT TABLE</div>
+  <div class="flex justify-between gap-16">
+    <span
+      [ngClass]="{ 'border-b border-white text-white': active === 'eventwise' }"
+      class="text-lg font-semibold focus:underline-offset-1 text-red-300"
+      (click)="active = 'eventwise'"
+      >EVENT WISE</span
+    >
+    <span
+      [ngClass]="{
+        'border-b border-white text-white': active === 'collegewise'
+      }"
+      class="text-lg font-semibold focus:underline-offset-1 text-red-300"
+      (click)="active = 'collegewise'"
+      >COLLEGE WISE</span
+    >
+  </div>
+  <div class="overscroll-x-auto">
     <!-- event-wise -->
-<div class="flex flex-col gap-6 ">
-    <div class="flex flex-col gap-6">
+    <div *ngIf="active === 'eventwise'" class="flex flex-col gap-6">
+      <div class="flex flex-col gap-6">
         <span class="text-2xl text-white font-bold mb-2">INQUIZATE</span>
-        <span class="text-md font-semibold text-white">1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE </span>
-        <span class="text-md font-semibold text-white">1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE </span>
-    </div>
-    <div class="flex flex-col gap-6">
+        <span class="text-md font-semibold text-white"
+          >1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE
+        </span>
+        <span class="text-md font-semibold text-white"
+          >1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE
+        </span>
+      </div>
+      <div class="flex flex-col gap-6">
         <span class="text-2xl text-white font-bold mb-2">INQUIZATE</span>
-        <span class="text-md font-semibold text-white">1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE </span>
-        <span class="text-md font-semibold text-white">1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE </span>
-    </div>
-    <div class="flex flex-col gap-6">
+        <span class="text-md font-semibold text-white"
+          >1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE
+        </span>
+        <span class="text-md font-semibold text-white"
+          >1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE
+        </span>
+      </div>
+      <div class="flex flex-col gap-6">
         <span class="text-2xl text-white font-bold mb-2">INQUIZATE</span>
-        <span class="text-md font-semibold text-white">1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE </span>
-        <span class="text-md font-semibold text-white">1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE </span>
+        <span class="text-md font-semibold text-white"
+          >1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE
+        </span>
+        <span class="text-md font-semibold text-white"
+          >1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE
+        </span>
+      </div>
     </div>
-</div>
     <!-- college-wise -->
-    <div class="px-6 flex flex-col gap-12">
-       <div class="flex justify-between items-center text-xl font-semibold text-white bg-[#00002C]/40  gap-10">
-            <span>1. NILGIRI COLLAGE OF ARTS AND SCIENCE</span>
-            <span class="px-3">-</span>
-            <span class="bg-black px-20 py-4">45 POINTS</span>
-       </div> 
-       <div class="flex justify-between items-center text-xl font-semibold text-white bg-[#00002C]/40  gap-10">
-            <span>1. NILGIRI COLLAGE OF ARTS AND SCIENCE</span>
-            <span class="px-3">-</span>
-            <span class="bg-black px-20 py-4">45 POINTS</span>
-       </div> 
+    <div
+      *ngIf="active === 'collegewise'"
+      class="px-6 flex flex-col gap-4 w-screen"
+    >
+      <div
+        *ngFor="let item of overall; let i = index"
+        class="flex px-1 py-1 w-full justify-between items-center text-sm sm:text-base font-medium md:text-xl md:font-semibold text-white bg-neutral-200/10 md:px-4 gap-10"
+      >
+        <div class="w-4/5">
+          <span class="whitespace-nowrap"
+            >{{ i + 1 }}. {{ item._id | uppercase }}</span
+          >
+        </div>
+        <span class="w-1/5 bg-black/30 px-4 py-2 md:px-20 md:py-4">{{
+          item.totalPoints
+        }}</span>
+      </div>
     </div>
-</div>
+  </div>
 </div>
