@@ -18,6 +18,7 @@ import { GrafiaComponent } from './events/grafia/grafia.component';
 import { PsyNtwistsComponent } from './events/psy-ntwists/psy-ntwists.component';
 import { CaptionStatersComponent } from './events/caption-staters/caption-staters.component';
 import { GamingComponent } from './events/gaming/gaming.component';
+import { GraphicaComponent } from './events/graphica/graphica.component';
 
 const routes: Routes = [
 {path:"" , component:HomeComponent},
@@ -34,7 +35,7 @@ const routes: Routes = [
 {path:"menadzer" , component:MenadzerComponent},
 {path:"bioscope" , component:BioscopeComponent},
 {path:"cicada" , component:CicadaComponent},
-{path:"graphica" , component:GrafiaComponent},
+{path:"graphica" , component:GraphicaComponent},
 {path:"psy-n-twists" , component:PsyNtwistsComponent},
 {path:"grafia" , component:GrafiaComponent},
 {path:"caption-staters" , component:CaptionStatersComponent},

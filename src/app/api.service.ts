@@ -9,20 +9,20 @@ export class ApiService {
 
   addResult(result: any) {
     return this.http.post<any>(
-      'http://localhost:8080/users/postResult',
+      'http://54.151.221.65:3090/users/postResult',
       result
     );
   }
   getAllResult() {
-    return this.http.get<any>('http://localhost:8080/users/getAllResult');
+    return this.http.get<any>('http://54.151.221.65:3090/users/getAllResult');
   }
   deleteOneResult(id: any) {
-    return this.http.post<any>('http://localhost:8080/users/deleteResult', id);
+    return this.http.post<any>('http://54.151.221.65:3090/users/deleteResult', id);
   }
   getOneResult(event: any) {
-    return this.http.post<any>('http://localhost:8080/users/oneResult', event);
+    return this.http.post<any>('http://54.151.221.65:3090/users/oneResult', event);
   }
   getOverall() {
-    return this.http.get<any>('http://localhost:8080/users/overall');
+    return this.http.get<any>('http://54.151.221.65:3090/users/overall');
   }
 }
