@@ -7,14 +7,12 @@ import Swiper from 'swiper';
   styleUrls: ['./hexagon.component.css']
 })
 export class HexagonComponent implements OnInit {
-
-
-  swiper: any=''
   constructor() {
+
    }
 
   ngOnInit(): void {
-    this.swiper= new Swiper(".mySwiper", {
+    let swiper = new Swiper('.mySwiper', {
       effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,

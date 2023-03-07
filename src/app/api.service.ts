@@ -19,6 +19,9 @@ export class ApiService {
   deleteOneResult(id: any) {
     return this.http.post<any>('http://localhost:8080/users/deleteResult', id);
   }
+  getOneResult(event: any) {
+    return this.http.post<any>('http://localhost:8080/users/oneResult', event);
+  }
   getOverall() {
     return this.http.get<any>('http://localhost:8080/users/overall');
   }
