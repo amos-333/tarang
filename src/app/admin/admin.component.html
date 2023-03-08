@@ -6,26 +6,35 @@
 
     <form class="flex flex-col gap-4 w-full" action="" (ngSubmit)="addResult()">
       <!-- Event -->
-      <div class="flex items-center justify-center w-full">
-        <div class="relative w-full">
-          <input
-            type="text"
-            name="event"
-            id="username"
-            class="w-full rounded px-2 py-3 border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer"
-            autocomplete="off"
-            [(ngModel)]="event"
-          />
-          <label
-            for="username"
-            class="ml-2 absolute left-0 top-1 text-black text-medium cursor-text peer-focus:text-xs peer-focus:-top-4 peer-focus:text-white transition-all"
-            >Event</label
-          >
-        </div>
-      </div>
+      <label
+      for="username"
+      class="ml-2  text-medium cursor-text text-white"
+      >Event</label
+    >
+      <select name="event"  [(ngModel)]="event" class="w-full py-3">
+        <option disabled value="">Please select one</option>
+        <option value="tesoro">tesoro</option>
+        <option value="tauziehen">tauziehen</option>
+        <option value="nritya">nritya</option>
+        <option value="brics">brics</option>
+        <option value="inquizate">inquizate</option>
+        <option value="marche">marche</option>
+        <option value="captionStaters">captionStaters</option>
+        <option value="menadzer">menadzer</option>
+        <option value="bioScope">bioScope</option>
+        <option value="cicada">cicada</option>
+        <option value="psy">psy</option>
+        <option value="grafia">grafia</option>
+
+      </select>
       <!-- Name -->
       <div class="flex items-center justify-center w-full">
         <div class="relative w-full">
+          <label
+          for="username"
+          class="ml-2  text-medium cursor-text text-white"
+          >Name</label
+        >
           <input
             type="text"
             id="username"
@@ -34,16 +43,17 @@
             name="name"
             [(ngModel)]="name"
           />
-          <label
-            for="username"
-            class="ml-2 absolute left-0 top-1 text-black text-medium cursor-text peer-focus:text-xs peer-focus:-top-4 peer-focus:text-white transition-all"
-            >Name</label
-          >
+
         </div>
       </div>
       <!-- College -->
       <div class="flex items-center justify-center w-full">
         <div class="relative w-full">
+          <label
+          for="username"
+          class="ml-2  left-0 top-1 text-black text-medium cursor-text text-white"
+          >College</label
+        >
           <input
             type="text"
             id="username"
@@ -52,34 +62,30 @@
             name="college"
             [(ngModel)]="college"
           />
-          <label
-            for="username"
-            class="ml-2 absolute left-0 top-1 text-black text-medium cursor-text peer-focus:text-xs peer-focus:-top-4 peer-focus:text-white transition-all"
-            >College</label
-          >
+
         </div>
       </div>
       <!-- Position -->
-      <div class="flex items-center justify-center w-full">
-        <div class="relative w-full">
-          <input
-            type="number"
-            id="username"
-            class="w-full rounded px-2 py-3 border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer"
-            autocomplete="off"
-            name="position"
-            [(ngModel)]="position"
-          />
-          <label
-            for="username"
-            class="ml-2 absolute left-0 top-1 text-black text-medium cursor-text peer-focus:text-xs peer-focus:-top-4 peer-focus:text-white transition-all"
-            >Position</label
-          >
-        </div>
-      </div>
+      <label
+      for="username"
+      class="ml-2  left-0 top-1 text-black text-medium cursor-text text-white"
+      >Positon</label
+    >
+      <select name="positon" [(ngModel)]="position" class="w-full py-3">
+        <option disabled value="">Please select one</option>
+        <option value="tesoro">1</option>
+        <option value="tauziehen">2</option>
+
+      </select>
+
       <!-- Point -->
       <div class="flex items-center justify-center w-full">
         <div class="relative w-full">
+          <label
+          for="username"
+          class="ml-2 text-white  left-0 top-1 text-black text-medium cursor-text text-whitetransition-all"
+          >Point</label
+        >
           <input
             type="number"
             id="username"
@@ -88,14 +94,10 @@
             name="mark"
             [(ngModel)]="mark"
           />
-          <label
-            for="username"
-            class="ml-2 absolute left-0 top-1 text-black text-medium cursor-text peer-focus:text-xs peer-focus:-top-4 peer-focus:text-white transition-all"
-            >Point</label
-          >
+
         </div>
       </div>
-      <button class="w-full mx-auto bg-white">Add Result</button>
+      <button class="w-full mx-auto py-4 bg-red-500 text-white rounded ">Add Result</button>
     </form>
   </div>
   <!-- results -->

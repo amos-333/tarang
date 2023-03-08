@@ -25,7 +25,7 @@ const routes: Routes = [
 {path:"rules" , component:RulesComponent},
 {path:"point-table" , component:PointTableComponent},
 {path:"hexagon" , component:HexagonComponent},
-{path:"admin" , component:AdminComponent},
+{path:"admin/fsd/ncas" , component:AdminComponent},
 {path:"teroso" , component:TerosoComponent},
 {path:"nritya" , component:NrityaComponent},
 {path:"tauhiezen" , component:TauhiezenComponent},
