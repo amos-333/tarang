@@ -1,23 +1,23 @@
 <div class="bg-[#00002C] scroll-smooth w-screen">
-  <div class="w-full h-[910px]">
-    <div class="w-full h-28 flex justify-start px-6 py-4">
+  <div class="w-full md:h-[910px] ">
+    <div class="w-full lg:h-28 h-24 flex justify-start px-6 py-4">
       <img src="../../assets/images/png/ncas-logo.png" alt="" />
     </div>
     <div
-      class="h-full tarang-bg flex flex-col justify-center items-center w-full -mt-28"
+      class="h-full tarang-bg flex flex-col justify-center items-center w-full md:-mt-28"
     >
       <img class="pt-16" src="../../assets/images/png/tarang-logo.png" alt="" />
     </div>
   </div>
-  <div class="w-full -mt-10 flex justify-center pb-40 triangle-bg">
-    <div class="flex gap-6 lg:gap-16 h-64 md:flex hidden">
-      <a href="#events" class="">
+  <div class="w-full md:-mt-10  flex justify-center pb-40 triangle-bg">
+    <div class="grid grid-cols-2 px-4 sm:grid-cols-3 lg:flex  justify-center gap-10 md:gap-10 flex w-full">
+      <a href="#events" class=" col-span-1">
         <div
-          class="flex flex-col items-center justify-center gap-8 h-full rounded-[33px] border border-[#DB6A01] w-52 hover:border-blue-900 hover:bg-blue-900 duration-200 bg-[#00001C]"
+          class="flex flex-col items-center justify-center gap-4 md:gap-4 h-full rounded-[33px] border-4 border-[#DB6A01] py-6 lg:w-52 hover:border-blue-900 hover:bg-blue-900 duration-200 bg-[#00001C]"
         >
           <div>
             <img
-              class="w-28 h-28"
+              class="w-20 h-20 md:w-28 md:h-28 "
               src="../../assets/images/png/events.png"
               alt=""
             />
@@ -25,28 +25,13 @@
           <div class="text-xl text-white font-semibold">EVENTS</div>
         </div>
       </a>
-      <!--google form registrstion link -->
-      <a href="https://forms.gle/k3bsosx8QaQ26MBi6">
+      <a routerLink="/point-table" class="col-span-1">
         <div
-          class="flex flex-col items-center justify-center gap-8 h-full rounded-[33px] border border-[#DB6A01] w-52 hover:border-blue-900 hover:bg-blue-900 duration-200 bg-[#00001C]"
+          class="flex flex-col items-center justify-center gap-4 md:gap-4 h-full rounded-[33px] border-4 border-[#DB6A01] py-6 lg:w-52 hover:border-blue-900 hover:bg-blue-900 duration-200 bg-[#00001C]"
         >
           <div>
             <img
-              class="w-28 h-28"
-              src="../../assets/images/png/registration.png"
-              alt=""
-            />
-          </div>
-          <div class="text-xl text-white font-semibold">REGISTRATION</div>
-        </div>
-      </a>
-      <a routerLink="/point-table">
-        <div
-          class="flex flex-col items-center justify-center gap-8 h-full rounded-[33px] border border-[#DB6A01] w-52 hover:border-blue-900 hover:bg-blue-900 duration-200 bg-[#00001C]"
-        >
-          <div>
-            <img
-              class="w-28 h-28"
+              class="w-20 h-20 md:w-28 md:h-28 "
               src="../../assets/images/png/results.png"
               alt=""
             />
@@ -54,6 +39,22 @@
           <div class="text-xl text-white font-semibold">RESULT</div>
         </div>
       </a>
+      <!--google form registrstion link -->
+      <a href="https://forms.gle/k3bsosx8QaQ26MBi6" class="  col-span-2 sm:col-span-1">
+        <div
+          class="flex flex-col items-center justify-center gap-4 md:gap-4 h-full rounded-[33px] border-4 border-[#DB6A01] py-6 lg:w-52 hover:border-blue-900 hover:bg-blue-900 duration-200 bg-[#00001C]"
+        >
+          <div>
+            <img
+              class="w-20 h-20 md:w-28 md:h-28"
+              src="../../assets/images/png/registration.png"
+              alt=""
+            />
+          </div>
+          <div class="text-xl text-white font-semibold">REGISTRATION</div>
+        </div>
+      </a>
+      
     </div>
   </div>
   <div class="eventbg">
@@ -385,7 +386,7 @@
         </div></a>
         </div>
         <div class="flex xl:gap-16 gap-8">
-          <a routerLink="caption-starters"><div
+          <div
             class="flex relative h-[295px] w-[280px] my-2 bg-[#6C63FF] justify-center items-center hexagon invisible"
           >
             <div
@@ -407,8 +408,8 @@
                 <span>2nd Prize:₹ 1,023/-</span>
               </div>
             </div>
-          </div></a>
-          <div
+          </div>
+          <a routerLink="caption-starters"><div
             class="flex relative h-[295px] w-[280px] my-2 bg-[#ED00B0] justify-center items-center hexagon"
           >
             <div
@@ -430,7 +431,7 @@
                 <span>2nd Prize:₹ 1,023/-</span>
               </div>
             </div>
-          </div>
+          </div></a>
           <a routerLink="gaming"><div
             class="flex relative h-[295px] w-[280px] my-2 bg-[#ED00B0] justify-center items-center hexagon"
           >
@@ -451,65 +452,317 @@
         </div>
       </div>
       <!-- mobile view -->
-      <div class="lg:hidden flex overflow-hidden">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper flex">
-            <div class="swiper-slide">
-              <div
-                class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
-              >
-                <div class="text-2xl font-bold">TEROSO</div>
-                <div class="flex gap-6 items-center justify-between">
-                  <div class="text-lg font-bold">TREASURE HUNT</div>
-                  <div>
-                    <img
-                      class="h-16 w-16"
-                      src="../../assets/images/png/event-teroso.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="text-lg font-bold">1 Prize:₹ 10,000/-</div>
+      <div class="lg:hidden flex overflow-x-auto snap-x gap-6 px-6 py-6 w-full scroll-smooth">
+        <a routerLink="teroso" class="snap-center"><div
+          class="flex relative h-[295px] w-[280px] my-2 bg-[#D48E05] justify-center items-center hexagon"
+        >
+          <div
+            class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+          >
+            <div class="text-2xl font-bold">TEROSO</div>
+            <div class="flex gap-6 items-center justify-between">
+              <div class="text-lg font-bold">TREASURE HUNT</div>
+              <div>
+                <img
+                  class="h-16 w-16"
+                  src="../../assets/images/png/event-teroso.png"
+                  alt=""
+                />
               </div>
             </div>
-            <div class="swiper-slide">
-              <div
-                class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
-              >
-                <div class="text-2xl font-bold">TEROSO</div>
-                <div class="flex gap-6 items-center justify-between">
-                  <div class="text-lg font-bold">TREASURE HUNT</div>
-                  <div>
-                    <img
-                      class="h-16 w-16"
-                      src="../../assets/images/png/event-teroso.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="text-lg font-bold">1 Prize:₹ 10,000/-</div>
+            <div class="text-lg font-bold">1 Prize:₹ 10,000/-</div>
+          </div>
+        </div></a>
+        <a routerLink="nritya" class="snap-center"><div
+          class="flex relative h-[295px] w-[280px] my-2 bg-[#D48E05] justify-center items-center hexagon"
+        >
+          <div
+            class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+          >
+            <div class="text-2xl font-bold">NIRTYA</div>
+            <div class="flex gap-6 items-center justify-between">
+              <div class="text-lg font-bold">GROUP DANCE</div>
+              <div>
+                <img
+                  class="h-16 w-16"
+                  src="../../assets/images/png/event-nirtya.png"
+                  alt=""
+                />
               </div>
             </div>
-            <div class="swiper-slide">
-              <div
-                class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
-              >
-                <div class="text-2xl font-bold">TEROSO</div>
-                <div class="flex gap-6 items-center justify-between">
-                  <div class="text-lg font-bold">TREASURE HUNT</div>
-                  <div>
-                    <img
-                      class="h-16 w-16"
-                      src="../../assets/images/png/event-teroso.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="text-lg font-bold">1 Prize:₹ 10,000/-</div>
-              </div>
+            <div class="text-lg font-bold flex flex-col">
+              <span>1st Prize:₹ 10,000/-</span>
+              <span>2nd Prize:₹ 5,000/-</span>
             </div>
           </div>
-        </div>
+        </div></a>
+        <a routerLink="tauhiezen" class="snap-center"><div
+          class="flex relative h-[295px] w-[280px] my-2 bg-[#D48E05] justify-center items-center hexagon"
+        >
+          <div
+            class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+          >
+            <div class="text-2xl font-bold">TAUHIEZEN</div>
+            <div class="flex gap-6 items-center justify-between">
+              <div class="text-lg font-bold">TUG OF WAR</div>
+              <div>
+                <img
+                  class="h-16 w-16"
+                  src="../../assets/images/png/event-tauhiezen.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="text-lg font-bold flex flex-col">
+              <span>1st Prize:₹ 10,000/-</span>
+              <span>2nd Prize:₹ 5,000/-</span>
+            </div>
+          </div>
+        </div></a>
+        <a routerLink="brics" class="snap-center"> <div
+          class="flex relative h-[295px] w-[280px] my-2 bg-[#D48E05] justify-center items-center hexagon"
+        >
+          <div
+            class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+          >
+            <div class="text-2xl font-bold">BRICS</div>
+            <div class="flex gap-6 items-center justify-between">
+              <div class="text-lg font-bold">5's FOOTBALL</div>
+              <div>
+                <img
+                  class="h-16 w-16"
+                  src="../../assets/images/png/event-brics.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="text-lg font-bold">1 Prize:₹ 10,000/-</div>
+          </div>
+        </div></a>
+          <a routerLink="marche" class="snap-center"><div  
+            class="flex relative h-[295px] w-[280px] my-2 bg-[#FF3A2F] justify-center items-center hexagon"
+          >
+            <div
+              class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+            >
+              <div class="text-2xl font-bold">MARCHE</div>
+              <div class="flex gap-6 items-center justify-between">
+                <div class="text-lg font-bold">CORPORATE WALK</div>
+                <div>
+                  <img
+                    class="h-16 w-16"
+                    src="../../assets/images/png/event-marche.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="text-lg font-bold flex flex-col">
+                <span>1st Prize:₹ 3,023/-</span>
+                <span>2nd Prize:₹ 1,023/-</span>
+              </div>
+            </div>
+          </div></a>
+          <a routerLink="inquizate" class="snap-center"><div
+            class="flex relative h-[295px] w-[280px] my-2 bg-[#FF3A2F] justify-center items-center hexagon"
+          >
+            <div
+              class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+            >
+              <div class="text-2xl font-bold">INQUIZATE</div>
+              <div class="flex gap-6 items-center justify-between">
+                <div class="text-lg font-bold">BUSINESS QUIZ</div>
+                <div>
+                  <img
+                    class="h-16 w-16"
+                    src="../../assets/images/png/event-inquizate.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="text-lg font-bold flex flex-col">
+                <span>1st Prize:₹ 3,023/-</span>
+                <span>2nd Prize:₹ 1,023/-</span>
+              </div>
+            </div>
+          </div></a>
+          <a routerLink="mendazer" class="snap-center"> <div
+            class="flex relative h-[295px] w-[280px] my-2 bg-[#FF3A2F] justify-center items-center hexagon"
+          >
+            <div
+              class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+            >
+              <div class="text-2xl font-bold menbg">MENDAZER</div>
+              <div class="flex gap-6 items-center justify-between">
+                <div class="text-lg font-bold">BEST MANAGER</div>
+                <div>
+                  <img
+                    class="h-16 w-16"
+                    src="../../assets/images/png/event-mendazer.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="text-lg font-bold flex flex-col">
+                <span>1st Prize:₹ 3,023/-</span>
+                <span>2nd Prize:₹ 1,023/-</span>
+              </div>
+            </div>
+          </div></a>
+            <a routerLink="bioscope" class="snap-center"><div
+              class="flex relative h-[295px] w-[280px] my-2 bg-[#FF3A2F] justify-center items-center hexagon"
+            >
+              <div
+                class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+              >
+                <div class="text-2xl font-bold">BIOSCOPE</div>
+                <div class="flex gap-6 items-center justify-between">
+                  <div class="text-lg font-bold">FILM REVIEW</div>
+                  <div>
+                    <img
+                      class="h-16 w-16"
+                      src="../../assets/images/png/event- bioscope.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="text-lg font-bold flex flex-col">
+                  <span>1st Prize:₹ 3,023/-</span>
+                  <span>2nd Prize:₹ 1,023/-</span>
+                </div>
+              </div>
+            </div></a>
+            <a routerLink="cicada" class="snap-center"><div
+              class="flex relative h-[295px] w-[280px] my-2 bg-[#6C63FF] justify-center items-center hexagon"
+            >
+              <div
+                class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+              >
+                <div class="text-2xl font-bold">CICADA</div>
+                <div class="flex gap-6 items-center justify-between">
+                  <div class="text-lg font-bold">DEBUGGING</div>
+                  <div>
+                    <img
+                      class="h-16 w-16"
+                      src="../../assets/images/png/event-cicada.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="text-lg font-bold flex flex-col">
+                  <span>1st Prize:₹ 3,023/-</span>
+                  <span>2nd Prize:₹ 1,023/-</span>
+                </div>
+              </div>
+            </div></a>
+            <a routerLink="graphica" class="snap-center"><div
+              class="flex relative h-[295px] w-[280px] my-2 bg-[#6C63FF] justify-center items-center hexagon"
+            >
+              <div
+                class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+              >
+                <div class="text-2xl font-bold">GRAPHICA</div>
+                <div class="flex gap-6 items-center justify-between">
+                  <div class="text-lg font-bold">WEB DESIGNING</div>
+                  <div>
+                    <img
+                      class="h-16 w-16"
+                      src="../../assets/images/png/event-graphica.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="text-lg font-bold flex flex-col">
+                  <span>1st Prize:₹ 3,023/-</span>
+                  <span>2nd Prize:₹ 1,023/-</span>
+                </div>
+              </div>
+            </div></a>
+            <a routerLink="psy-ntwists" class="snap-center"><div
+              class="flex relative h-[295px] w-[280px] my-2 bg-[#6C63FF] justify-center items-center hexagon"
+            >
+              <div
+                class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+              >
+                <div class="text-2xl font-bold">PSY-N-TWISTS</div>
+                <div class="flex gap-6 items-center justify-between">
+                  <div class="text-lg font-bold">PSY-GAMES</div>
+                  <div>
+                    <img
+                      class="h-16 w-16"
+                      src="../../assets/images/png/event-psy-twists.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="text-lg font-bold flex flex-col">
+                  <span>1st Prize:₹ 3,023/-</span>
+                  <span>2nd Prize:₹ 1,023/-</span>
+                </div>
+              </div>
+            </div></a>
+           <a routerLink="grafia" class="snap-center"> <div
+            class="flex relative h-[295px] w-[280px] my-2 bg-[#6C63FF] justify-center items-center hexagon"
+          >
+            <div
+              class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+            >
+              <div class="text-2xl font-bold">GRAFIA</div>
+              <div class="flex gap-6 items-center justify-between">
+                <div class="text-lg font-bold">VIDEOGRAPHY</div>
+                <div>
+                  <img
+                    class="h-16 w-16"
+                    src="../../assets/images/png/event-grafia.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="text-lg font-bold flex flex-col">
+                <span>1st Prize:₹ 3,023/-</span>
+                <span>2nd Prize:₹ 1,023/-</span>
+              </div>
+            </div>
+          </div></a>
+          <a routerLink="caption-starters" class="snap-center"><div
+            class="flex relative h-[295px] w-[280px] my-2 bg-[#ED00B0] justify-center items-center hexagon"
+          >
+            <div
+              class="px-4 h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+            >
+              <div class="text-2xl font-bold mt-3">CAPTION STATERS</div>
+              <div class="flex gap-6 items-center justify-between">
+                <div class="text-lg font-bold">PRODUCT LAUNCH</div>
+                <div>
+                  <img
+                    class="h-16 w-16"
+                    src="../../assets/images/png/event-inquizate.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="text-lg font-bold flex flex-col">
+                <span>1st Prize:₹ 3,023/-</span>
+                <span>2nd Prize:₹ 1,023/-</span>
+              </div>
+            </div>
+          </div></a>
+          <a routerLink="gaming" class="snap-center"><div
+            class="flex relative h-[295px] w-[280px] my-2 bg-[#ED00B0] justify-center items-center hexagon"
+          >
+            <div
+              class="h-[270px] w-[260px] gap-8 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+            >
+              <div class="text-2xl font-bold">GAMING</div>
+              <div>
+                <img
+                  class="h-16 w-16"
+                  src="../../assets/images/png/event-gaming.png"
+                  alt=""
+                />
+              </div>
+              <div class="text-lg font-bold">FUN ZONE</div>
+            </div>
+          </div></a>
       </div>
     </div>
 
