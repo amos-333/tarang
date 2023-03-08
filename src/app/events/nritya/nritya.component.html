@@ -1,1 +1,64 @@
-<p>nritya works!</p>
+<div class="bg-[#00002C] h-screen">
+  <div class="overflow-x-auto h-full">
+    <app-navbar></app-navbar>
+    <div class="flex flex-col mt-10">
+      <div class="flex justify-between gap-20 px-20">
+        <div class="text-white max-w-4xl">
+          <ul class="space-y-6 text-xl">
+            <li>Minimum participants should be 4 numbers.</li>
+            <li>One or more teams can participate from same college.</li>
+            <li>Proper dress code to be maintained</li>
+            <li>Costumes should be brought by the participants.</li>
+            <li>Obscene songs should be avoided.</li>
+            <li>Try to choose theme based songs.</li>
+            <li>The duration for each team is 5 minutes.</li>
+          </ul>
+        </div>
+        <div>
+          <div
+            class="flex relative h-[295px] w-[280px] my-2 bg-[#D48E05] justify-center items-center hexagon"
+          >
+            <div
+              class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+            >
+              <div class="text-2xl font-bold">NIRTYA</div>
+              <div class="flex gap-6 items-center justify-between">
+                <div class="text-lg font-bold">GROUP DANCE</div>
+                <div>
+                  <img
+                    class="h-16 w-16"
+                    src="../../assets/images/png/event-nirtya.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="text-lg font-bold flex flex-col">
+                <span>1st Prize:₹ 10,000/-</span>
+                <span>2nd Prize:₹ 5,000/-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- bottom buttons -->
+  <div class="w-full justify-end flex items-center bottom-0 fixed bg-[#00002C]">
+    <div class="flex gap-6 px-8 py-4">
+      <a href="https://forms.gle/k3bsosx8QaQ26MBi6"
+        ><button
+          class="text-xl font-semibold px-8 py-2 rounded-xl border-2 border-[#D48E05] text-white bg-[#00002C]"
+        >
+          REGISTER
+        </button></a
+      >
+      <a routerLink="/point-table"
+        ><button
+          class="text-xl font-semibold px-8 py-2 rounded-xl border-2 border-[#D48E05] text-white bg-[#00002C]"
+        >
+          RESULTS
+        </button></a
+      >
+    </div>
+  </div>
+</div>

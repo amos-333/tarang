@@ -1,1 +1,75 @@
-<p>menadzer works!</p>
+<div class="bg-[#00002C] h-screen">
+  <div class="overflow-x-auto h-full">
+    <app-navbar></app-navbar>
+    <div class="flex flex-col mt-10">
+      <div class="flex justify-between gap-20 px-20">
+        <div class="text-white max-w-4xl">
+          <ul class="space-y-6 text-xl">
+            <li>This is an individual event</li>
+            <li>
+              The prelims will start at 10. am, so participants are requested to
+              report and complete the registration process before 9.45 am
+            </li>
+            <li>
+              Participants should bring a copy of their resume (hard copy)
+            </li>
+            <li>
+              The number of rounds and rules will be announced on the spot
+            </li>
+            <li>Medium of Communication should be English</li>
+            <li>Formal attire would be appreciated</li>
+            <li>
+              Inappropriate behavior of any kind will lead to immediate
+              disqualification
+            </li>
+            <li>Decision of the judges will be final.</li>
+          </ul>
+        </div>
+        <div>
+          <div
+            class="flex relative h-[295px] w-[280px] my-2 bg-[#FF3A2F] justify-center items-center hexagon"
+          >
+            <div
+              class="h-[270px] w-[260px] gap-4 bg-white hexagon-inner bg-[#D9D9D9] hover:text-white hover:bg-gradient-to-tr hover:from-[#00001C] hover:to-[#680167] flex flex-col justify-center items-center"
+            >
+              <div class="text-2xl font-bold menbg">MENDAZER</div>
+              <div class="flex gap-6 items-center justify-between">
+                <div class="text-lg font-bold">BEST MANAGER</div>
+                <div>
+                  <img
+                    class="h-16 w-16"
+                    src="../../assets/images/png/event-mendazer.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="text-lg font-bold flex flex-col">
+                <span>1st Prize:₹ 3,023/-</span>
+                <span>2nd Prize:₹ 1,023/-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- bottom buttons -->
+  <div class="w-full justify-end flex items-center bottom-0 fixed bg-[#00002C]">
+    <div class="flex gap-6 px-8 py-4">
+      <a href="https://forms.gle/k3bsosx8QaQ26MBi6"
+        ><button
+          class="text-xl font-semibold px-8 py-2 rounded-xl border-2 border-[#D48E05] text-white bg-[#00002C]"
+        >
+          REGISTER
+        </button></a
+      >
+      <a routerLink="/point-table"
+        ><button
+          class="text-xl font-semibold px-8 py-2 rounded-xl border-2 border-[#D48E05] text-white bg-[#00002C]"
+        >
+          RESULTS
+        </button></a
+      >
+    </div>
+  </div>
+</div>

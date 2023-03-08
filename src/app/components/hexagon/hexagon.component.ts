@@ -21,7 +21,7 @@ export class HexagonComponent implements OnInit {
         rotate: 0,
         stretch: 0,
         depth: 100,
-        modifier: 3,
+        modifier: 5,
         slideShadows: true,
       },
     });
