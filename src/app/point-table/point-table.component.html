@@ -1,5 +1,5 @@
 <div
-  class="bg-[#00002C] h-screen items-center flex flex-col gap-12 pt-20 items-center resultbg"
+  class="bg-[#00002C] h-min items-center flex flex-col gap-12 pt-20 items-center resultbg"
 >
   <div class="text-2xl font-bold text-white">POINT TABLE</div>
   <div class="flex justify-between gap-16">
@@ -20,7 +20,8 @@
   </div>
   <div class="overscroll-x-auto">
     <!-- event-wise -->
-    <div *ngIf="active === 'eventwise'" class="flex flex-col gap-6">
+    <div *ngIf="active === 'eventwise'" class="flex flex-col gap-6 p-4">
+      <!-- TESORO -->
       <div class="flex flex-col gap-6">
         <span class="text-2xl text-white font-bold mb-2"
           >TESORO-TREASURE HUNT</span
@@ -31,8 +32,239 @@
           >
         </div>
         <div *ngIf="tesoro.length" class="flex flex-col gap-0">
-          <span class="text-md font-semibold text-white"
-            >1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE
+          <span
+            *ngFor="let item of tesoro; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
+          </span>
+        </div>
+      </div>
+      <!-- TAUZIEHEN -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >TAUZIEHEN-TUG OF WAR</span
+        >
+        <div *ngIf="tauziehen.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="tauziehen.length" class="flex flex-col gap-0">
+          <span
+            *ngFor="let item of tauziehen; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
+          </span>
+        </div>
+      </div>
+      <!-- NRITYA -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >NRITYA-GROUP DANCE</span
+        >
+        <div *ngIf="nritya.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="nritya.length" class="flex flex-col gap-0">
+          <span
+            *ngFor="let item of nritya; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
+          </span>
+        </div>
+      </div>
+      <!-- BRICS -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >BRICS-5's FOOTBALL</span
+        >
+        <div *ngIf="brics.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="brics.length" class="flex flex-col gap-0">
+          <span
+            *ngFor="let item of brics; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
+          </span>
+        </div>
+      </div>
+      <!-- INQUIZATE -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >INQUIZATE-BUSINESS QUIZ</span
+        >
+        <div *ngIf="inquizate.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="inquizate.length" class="flex flex-col gap-0">
+          <span
+            *ngFor="let item of inquizate; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
+          </span>
+        </div>
+      </div>
+      <!-- MARCHE -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >MARCHE-CORPORATE WALK</span
+        >
+        <div *ngIf="marche.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="marche.length" class="flex flex-col gap-0">
+          <span
+            *ngFor="let item of marche; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
+          </span>
+        </div>
+      </div>
+      <!-- CAPTION STATERS -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >CAPTION STATERS-PRODUCTION LAUNCH</span
+        >
+        <div *ngIf="captionStaters.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="captionStaters.length" class="flex flex-col gap-0">
+          <span
+            *ngFor="let item of captionStaters; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
+          </span>
+        </div>
+      </div>
+      <!-- MENADZER -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >MENADZER-BEST MANAGER</span
+        >
+        <div *ngIf="menadzer.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="menadzer.length" class="flex flex-col gap-0">
+          <span
+            *ngFor="let item of menadzer; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
+          </span>
+        </div>
+      </div>
+      <!-- BIOSCOPE -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >BIOSCOPE-FILM REVIEW</span
+        >
+        <div *ngIf="bioScope.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="bioScope.length" class="flex flex-col gap-0">
+          <span
+            *ngFor="let item of bioScope; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
+          </span>
+        </div>
+      </div>
+      <!-- CICADA -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >CICADA-DEBUGGING</span
+        >
+        <div *ngIf="cicada.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="cicada.length" class="flex flex-col gap-0">
+          <span
+            *ngFor="let item of cicada; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
+          </span>
+        </div>
+      </div>
+      <!-- GRAPHICA -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >GRAPHICA-WEB DESIGNING</span
+        >
+        <div *ngIf="graphica.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="graphica.length" class="flex flex-col gap-0">
+          <span
+            *ngFor="let item of graphica; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
+          </span>
+        </div>
+      </div>
+      <!-- PSY-N-TWISTS -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >PSY-N-TWISTS-PSY GAMES</span
+        >
+        <div *ngIf="psy.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="psy.length" class="flex flex-col gap-0">
+          <span
+            *ngFor="let item of psy; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
+          </span>
+        </div>
+      </div>
+      <!-- GRAFIA -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >GRAFIA-VIDEO GRAPHY</span
+        >
+        <div *ngIf="grafia.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="grafia.length" class="flex flex-col gap-0">
+          <span
+            *ngFor="let item of grafia; let i = index"
+            class="text-md font-semibold text-white"
+            >{{ i + 1 }}{{ i === 1 ? "nd" : "st" }} Prize -
+            {{ item.name | uppercase }} -{{ item.college | uppercase }}
           </span>
         </div>
       </div>
@@ -51,9 +283,9 @@
             >{{ i + 1 }}. {{ item._id | uppercase }}</span
           >
         </div>
-        <span class="w-1/5 bg-black/30 px-4 py-2 md:px-20 md:py-4">{{
-          item.totalPoints
-        }} POINTS</span>
+        <span class="w-1/5 bg-black/30 px-4 py-2 md:px-20 md:py-4"
+          >{{ item.totalPoints }}</span
+        >
       </div>
     </div>
   </div>

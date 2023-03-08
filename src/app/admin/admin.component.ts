@@ -31,7 +31,7 @@ export class AdminComponent implements OnInit {
       name: this.name,
       college: this.college,
       mark: this.mark,
-      position: this.mark,
+      position: this.position,
     };
 
     this.api.addResult(data).subscribe((res) => {
