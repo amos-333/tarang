@@ -21,6 +21,7 @@
   <div class="overscroll-x-auto">
     <!-- event-wise -->
     <div *ngIf="active === 'eventwise'" class="flex flex-col gap-6">
+<!-- TESORO -->
       <div class="flex flex-col gap-6">
         <span class="text-2xl text-white font-bold mb-2"
           >TESORO-TREASURE HUNT</span
@@ -31,8 +32,40 @@
           >
         </div>
         <div *ngIf="tesoro.length" class="flex flex-col gap-0">
-          <span class="text-md font-semibold text-white"
-            >1st Prize - Niranjan V - NILGIRI COLLEGE OF ARTS AND SCIENCE
+          <span *ngFor="let item of tesoro;let i = index" class="text-md font-semibold text-white"
+            >{{i+1}}{{ i===1?'nd':'st'}} Prize - {{item.name | uppercase}} -{{item.college | uppercase}}
+          </span>
+        </div>
+      </div>
+<!-- TAUZIEHEN -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >TAUZIEHEN-TUG OF WAR</span
+        >
+        <div *ngIf="tesoro.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="tesoro.length" class="flex flex-col gap-0">
+          <span *ngFor="let item of tesoro;let i = index" class="text-md font-semibold text-white"
+            >{{i+1}}{{ i===1?'nd':'st'}} Prize - {{item.name | uppercase}} -{{item.college | uppercase}}
+          </span>
+        </div>
+      </div>
+<!-- NRITYA -->
+      <div class="flex flex-col gap-6">
+        <span class="text-2xl text-white font-bold mb-2"
+          >NRITYA-GROUP</span
+        >
+        <div *ngIf="tesoro.length === 0">
+          <span class="snipper text-white font-light animate-pulse"
+            >Result not declared yet</span
+          >
+        </div>
+        <div *ngIf="tesoro.length" class="flex flex-col gap-0">
+          <span *ngFor="let item of tesoro;let i = index" class="text-md font-semibold text-white"
+            >{{i+1}}{{ i===1?'nd':'st'}} Prize - {{item.name | uppercase}} -{{item.college | uppercase}}
           </span>
         </div>
       </div>
